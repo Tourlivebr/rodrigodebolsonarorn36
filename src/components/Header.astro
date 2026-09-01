@@ -10,7 +10,7 @@ const { nav, name } = siteConfig;
 >
   <div class="container-wide flex items-center justify-between h-16 md:h-20 px-4">
     <a
-      href="#inicio"
+      href="/#inicio"
       class="flex items-center gap-2 shrink-0"
       aria-label="Rodrigo de Bolsonaro - Ir para o início"
     >
@@ -29,7 +29,7 @@ const { nav, name } = siteConfig;
           nav.map((item) => (
             <li>
               <a
-                href={item.href}
+                href={item.href.startsWith('/') ? item.href : `/${item.href}`}
                 class="inline-flex items-center px-4 py-2 text-sm font-semibold text-slate-700 hover:text-rn-blue rounded-lg transition-colors"
               >
                 {item.label}
@@ -42,7 +42,7 @@ const { nav, name } = siteConfig;
 
     <div class="flex items-center gap-2">
       <a
-        href="#contato"
+        href="/#contato"
         class="hidden md:inline-flex items-center px-4 py-2 rounded-lg text-sm font-semibold bg-rn-green text-white hover:bg-rn-green/90 transition-colors"
       >
         Fale Conosco
@@ -94,7 +94,7 @@ const { nav, name } = siteConfig;
           nav.map((item) => (
             <li>
               <a
-                href={item.href}
+                href={item.href.startsWith('/') ? item.href : `/${item.href}`}
                 data-nav-link
                 class="block px-4 py-3 rounded-lg text-base font-semibold text-slate-700 hover:bg-slate-50 hover:text-rn-blue transition-colors"
               >
@@ -105,7 +105,7 @@ const { nav, name } = siteConfig;
         }
         <li class="pt-2">
           <a
-            href="#contato"
+            href="/#contato"
             data-nav-link
             class="block w-full text-center px-4 py-3 rounded-lg bg-rn-green text-white font-semibold hover:bg-rn-green/90 transition-colors"
           >

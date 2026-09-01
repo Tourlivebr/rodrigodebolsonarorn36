@@ -27,14 +27,13 @@ export const siteConfig = {
   social: {
     instagram: 'https://instagram.com/rodrigodebolsonarorn36',
     facebook: 'https://facebook.com/rodrigodebolsonarorn36',
-    whatsapp: 'https://wa.me/',
+    whatsapp: 'https://wa.me/5554993220552',
     youtube: 'https://youtube.com/',
     tiktok: 'https://tiktok.com/',
     x: 'https://x.com/',
   },
   nav: [
     { label: 'Início', href: '#inicio' },
-    { label: 'Quem é', href: '#quem-e' },
     { label: 'Propostas', href: '#propostas' },
     { label: 'Perguntas e Respostas', href: '#faq' },
     { label: 'Contato', href: '#contato' },

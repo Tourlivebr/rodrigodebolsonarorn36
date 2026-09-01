@@ -19,11 +19,18 @@ if (!proposal) {
   return Astro.redirect('/404');
 }
 
+const defaultBannerBg = 'from-slate-50 via-white to-emerald-50';
+
 const bannerBg: Record<string, string> = {
-  'saude-publica': 'from-emerald-50 via-white to-rose-50',
+  'saude-publica-regionalizacao': 'from-emerald-50 via-white to-rose-50',
   'desenvolvimento-economico-infraestrutura': 'from-sky-50 via-white to-amber-50',
-  'seguranca-publica': 'from-blue-50 via-white to-amber-50',
-  'educacao-acao-social-esporte': 'from-emerald-50 via-white to-yellow-50',
+  'seguranca-publica-sistema-prisional': 'from-blue-50 via-white to-amber-50',
+  'turismo-seguranca-turistica': 'from-cyan-50 via-white to-blue-50',
+  'tecnologia-energia-recursos-naturais': 'from-violet-50 via-white to-sky-50',
+  'agropecuaria-pesca-seguranca-hidrica': 'from-lime-50 via-white to-emerald-50',
+  'responsabilidade-fiscal-ambiente-negocios': 'from-slate-50 via-white to-blue-50',
+  'educacao-acao-social-empregabilidade': 'from-emerald-50 via-white to-yellow-50',
+  'esporte': 'from-orange-50 via-white to-amber-50',
 };
 
 const seoKeywords = [
@@ -70,7 +77,7 @@ const seoImage = proposal.imagem?.startsWith('http')
         Voltar para todas as propostas
       </a>
 
-      <div class={`relative overflow-hidden rounded-3xl border border-slate-100 bg-gradient-to-br ${bannerBg[proposal.slug] || bannerBg['saude-publica']} mb-6 shadow-sm`}>
+      <div class={`relative overflow-hidden rounded-3xl border border-slate-100 bg-gradient-to-br ${bannerBg[proposal.slug] || defaultBannerBg} mb-6 shadow-sm`}>
         <div class="grid grid-cols-1 md:grid-cols-5 items-stretch">
           <div class="md:col-span-2 aspect-[16/10] md:aspect-auto overflow-hidden">
             <img
