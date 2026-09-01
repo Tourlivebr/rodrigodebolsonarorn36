@@ -11,11 +11,11 @@ import { siteConfig } from '@data/site';
 ---
 
 <Layout
-  title=""
+  title={`${siteConfig.author.name} — ${siteConfig.author.candidato}`}
   description={siteConfig.description}
   canonical="/"
   image="/og-image.jpg"
-  breadcrumbs={[{ name: 'Início', url: '/' }]}
+  breadcrumbs={[{ name: 'Início', url: siteConfig.url + '/' }]}
 >
   <Header />
   <About />

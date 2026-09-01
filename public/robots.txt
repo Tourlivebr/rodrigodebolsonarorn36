@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://rodrigodebolsonaro36.com.br/sitemap-index.xml
+Host: https://www.rodrigodebolsonarorn36.com.br
+Sitemap: https://www.rodrigodebolsonarorn36.com.br/sitemap-index.xml
