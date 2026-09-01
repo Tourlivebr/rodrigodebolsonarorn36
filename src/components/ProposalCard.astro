@@ -1,0 +1,55 @@
+---
+import type { Proposal } from '@data/proposals';
+
+const { proposal } = Astro.props;
+
+interface Props {
+  proposal: Proposal;
+}
+
+const fallbackBg: Record<string, string> = {
+  'saude-publica': 'bg-gradient-to-br from-emerald-50 via-white to-rose-50',
+  'desenvolvimento-economico-infraestrutura': 'bg-gradient-to-br from-sky-50 via-white to-amber-50',
+  'seguranca-publica': 'bg-gradient-to-br from-blue-50 via-white to-amber-50',
+  'educacao-acao-social-esporte': 'bg-gradient-to-br from-emerald-50 via-white to-yellow-50',
+};
+---
+
+<article class="card h-full flex flex-col overflow-hidden !p-0">
+  <div class={`relative w-full aspect-[16/9] overflow-hidden ${fallbackBg[proposal.slug] || fallbackBg['saude-publica']}`}>
+    <img
+      src={proposal.imagem}
+      alt={proposal.imagemAlt ?? `Ilustração — ${proposal.titulo}`}
+      class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+      loading="lazy"
+      decoding="async"
+      onerror="this.style.display='none'"
+    />
+    <div class="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-white/95 to-transparent pointer-events-none" />
+  </div>
+
+  <div class="p-6 md:p-8 flex flex-col flex-1">
+    <span class="text-xs font-semibold uppercase tracking-wide text-rn-green mb-3">
+      Proposta Apresentada
+    </span>
+
+    <h3 class="font-display font-bold text-xl md:text-2xl text-slate-900 mb-3">
+      {proposal.titulo}
+    </h3>
+
+    <p class="text-slate-600 leading-relaxed mb-6 flex-1">
+      {proposal.resumo}
+    </p>
+
+    <a
+      href={`/propostas/${proposal.slug}/`}
+      class="btn-secondary mt-auto justify-self-start !px-5 !py-2.5 !text-sm"
+      aria-label={`Ver todas as propostas de ${proposal.titulo}`}
+    >
+      Ver propostas
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-4 h-4 ml-2" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+      </svg>
+    </a>
+  </div>
+</article>
