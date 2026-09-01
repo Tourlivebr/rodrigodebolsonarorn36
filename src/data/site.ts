@@ -1,13 +1,13 @@
 export const siteConfig = {
-  name: 'Rodrigo de Bolsonaro',
-  title: 'Rodrigo de Bolsonaro — Portal Informativo',
+  name: 'Rodrigo de Bolsonaro 36',
+  title: 'Rodrigo de Bolsonaro 36 — Deus, Família e RN',
   description:
-    'Portal informativo institucional sobre Rodrigo de Bolsonaro, candidato ao Governo do Rio Grande do Norte nas eleições de 2026. Conheça as propostas apresentadas para o RN.',
-  shortName: 'Rodrigo de Bolsonaro',
+    'Site de Rodrigo de Bolsonaro 36, candidato ao Governo do Rio Grande do Norte nas eleições de 2026. Conheça as propostas apresentadas para o RN.',
+  shortName: 'Rodrigo de Bolsonaro 36',
   url: 'https://rodrigodebolsonaro36.com.br',
   locale: 'pt_BR',
   author: {
-    name: 'Rodrigo de Bolsonaro',
+    name: 'Rodrigo de Bolsonaro 36',
     idade: 46,
     cidade: 'Natal',
     estado: 'Rio Grande do Norte',
