@@ -21,13 +21,13 @@ export const siteConfig = {
   },
   contact: {
     email: 'contato@rodrigodebolsonarorn36.com.br',
-    telefone: '',
+    telefone: '5584998104751',
     endereco: 'Natal, Rio Grande do Norte',
   },
   social: {
     instagram: 'https://instagram.com/rodrigodebolsonarorn36',
     facebook: 'https://facebook.com/rodrigodebolsonarorn36',
-    whatsapp: 'https://wa.me/5554993220552',
+    whatsapp: 'https://wa.me/5584998104751',
     youtube: 'https://youtube.com/',
     tiktok: 'https://tiktok.com/',
     x: 'https://x.com/',
